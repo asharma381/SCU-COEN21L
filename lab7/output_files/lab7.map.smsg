@@ -1,0 +1,3 @@
+Info (10281): Verilog HDL Declaration information at WinLose.v(5): object "e" differs only in case from object "E" in the same scope File: //samba1/sbuddhar/dcengr/Desktop/elen/lab7/WinLose.v Line: 5
+Info (10281): Verilog HDL Declaration information at WinLose.v(5): object "w" differs only in case from object "W" in the same scope File: //samba1/sbuddhar/dcengr/Desktop/elen/lab7/WinLose.v Line: 5
+Info (10281): Verilog HDL Declaration information at WinLose.v(5): object "l" differs only in case from object "L" in the same scope File: //samba1/sbuddhar/dcengr/Desktop/elen/lab7/WinLose.v Line: 5

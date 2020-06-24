@@ -1,0 +1,14 @@
+module pong_game12 (ireset, irsrv, ilsrv, irpad, ilpad, sp, mclock50, q, lscore, rscore, lsi, rsi, vclk);
+	input ireset, irsrv, ilsrv, irpad, ilpad, mclock50;
+	input [2:0] sp;
+	output lso, rsi, vclk;
+	output [3:0] lscore, rscore;
+	output [11:0] q;
+	wire a, b;
+	
+	
+	var_clock(mclock, sp, vclk);
+	pong_controller2(ireset, irsrv, ilsrv, irpad, ilpad, s, mclock50, q, lct, rct, lsi, rsi, vclk, a, b, c, d, e, f, g, h, i);
+	pong12(rsi, lsi, clk, s, q);
+	counter27(clk, a, ireset, Q[26:0]);
+	counter27(clk, b, ireset, Q[26:0]);

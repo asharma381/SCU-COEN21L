@@ -1,0 +1,8 @@
+module myadder4 (X, Y, S);
+	input X[3:0];
+	input Y[3:0];
+	output S[3:0];
+	
+	myfulladd u1 (X)
+	
+	

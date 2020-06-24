@@ -1,0 +1,7 @@
+
+State Machine - |lab8|pong_controller1:inst3|currentstate
+Name currentstate.1000 currentstate.0100 currentstate.0010 currentstate.0001 
+currentstate.0001 0 0 0 0 
+currentstate.0010 0 0 1 1 
+currentstate.0100 0 1 0 1 
+currentstate.1000 1 0 0 1 

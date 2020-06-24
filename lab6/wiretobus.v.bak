@@ -1,0 +1,9 @@
+module wire_to_bus(T2,T1,T0,out);
+input T1;
+input T0;
+input T2;
+output [3:0] out;
+
+assign out = {1'b0, T2, T1, T0};
+
+endmodule

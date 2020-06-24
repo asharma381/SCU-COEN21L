@@ -1,0 +1,113 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'pong_game12:inst|var_clock:vc|vclk~_Duplicate_1'
+Slack : -4.020
+TNS   : -109.113
+
+Type  : Slow 1200mV 85C Model Setup 'pong_game12:inst|pong_controller2:pc2|curS[0]~_Duplicate_1'
+Slack : -3.966
+TNS   : -29.618
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -3.758
+TNS   : -51.556
+
+Type  : Slow 1200mV 85C Model Hold 'pong_game12:inst|var_clock:vc|vclk~_Duplicate_1'
+Slack : 0.444
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.456
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'pong_game12:inst|pong_controller2:pc2|curS[0]~_Duplicate_1'
+Slack : 0.464
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -46.123
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pong_game12:inst|var_clock:vc|vclk~_Duplicate_1'
+Slack : -1.487
+TNS   : -59.480
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pong_game12:inst|pong_controller2:pc2|curS[0]~_Duplicate_1'
+Slack : 0.420
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'pong_game12:inst|var_clock:vc|vclk~_Duplicate_1'
+Slack : -3.823
+TNS   : -101.856
+
+Type  : Slow 1200mV 0C Model Setup 'pong_game12:inst|pong_controller2:pc2|curS[0]~_Duplicate_1'
+Slack : -3.649
+TNS   : -28.068
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -3.452
+TNS   : -43.336
+
+Type  : Slow 1200mV 0C Model Hold 'pong_game12:inst|pong_controller2:pc2|curS[0]~_Duplicate_1'
+Slack : 0.363
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'pong_game12:inst|var_clock:vc|vclk~_Duplicate_1'
+Slack : 0.393
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.408
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -46.123
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pong_game12:inst|var_clock:vc|vclk~_Duplicate_1'
+Slack : -1.487
+TNS   : -59.562
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pong_game12:inst|pong_controller2:pc2|curS[0]~_Duplicate_1'
+Slack : 0.242
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'pong_game12:inst|var_clock:vc|vclk~_Duplicate_1'
+Slack : -1.229
+TNS   : -24.384
+
+Type  : Fast 1200mV 0C Model Setup 'pong_game12:inst|pong_controller2:pc2|curS[0]~_Duplicate_1'
+Slack : -1.169
+TNS   : -7.925
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -1.106
+TNS   : -7.899
+
+Type  : Fast 1200mV 0C Model Hold 'pong_game12:inst|pong_controller2:pc2|curS[0]~_Duplicate_1'
+Slack : 0.063
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'pong_game12:inst|var_clock:vc|vclk~_Duplicate_1'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.190
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -40.473
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pong_game12:inst|var_clock:vc|vclk~_Duplicate_1'
+Slack : -1.000
+TNS   : -40.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pong_game12:inst|pong_controller2:pc2|curS[0]~_Duplicate_1'
+Slack : 0.315
+TNS   : 0.000
+
+------------------------------------------------------------

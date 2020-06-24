@@ -1,0 +1,83 @@
+|lab3
+HEX0[0] <= bin_7seg:inst10.seg[0]
+HEX0[1] <= bin_7seg:inst10.seg[1]
+HEX0[2] <= bin_7seg:inst10.seg[2]
+HEX0[3] <= bin_7seg:inst10.seg[3]
+HEX0[4] <= bin_7seg:inst10.seg[4]
+HEX0[5] <= bin_7seg:inst10.seg[5]
+HEX0[6] <= bin_7seg:inst10.seg[6]
+SW[0] => adder:inst16.cs
+SW[0] => LEDR[0].DATAIN
+SW[0] => inst3.IN0
+SW[1] => adder:inst16.ls
+SW[1] => inst8.IN2
+SW[1] => inst1.IN0
+SW[2] => adder:inst16.rs
+SW[2] => inst2.IN0
+SW[2] => inst5.IN2
+SW[2] => inst.IN1
+SW[3] => inst9.IN0
+SW[3] => inst5.IN1
+LEDR[0] <= SW[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3|bin_7seg:inst10
+bi_digit[0] => Mux0.IN19
+bi_digit[0] => Mux1.IN19
+bi_digit[0] => Mux2.IN10
+bi_digit[0] => Mux3.IN10
+bi_digit[0] => Mux4.IN19
+bi_digit[0] => Mux5.IN19
+bi_digit[1] => Mux0.IN18
+bi_digit[1] => Mux1.IN18
+bi_digit[1] => Mux4.IN18
+bi_digit[1] => Mux5.IN18
+bi_digit[1] => Mux6.IN10
+bi_digit[1] => Mux7.IN10
+bi_digit[2] => Mux0.IN17
+bi_digit[2] => Mux1.IN17
+bi_digit[2] => Mux2.IN9
+bi_digit[2] => Mux3.IN9
+bi_digit[2] => Mux4.IN17
+bi_digit[2] => Mux5.IN17
+bi_digit[2] => Mux6.IN9
+bi_digit[2] => Mux7.IN9
+bi_digit[3] => Mux0.IN16
+bi_digit[3] => Mux1.IN16
+bi_digit[3] => Mux2.IN8
+bi_digit[3] => Mux3.IN8
+bi_digit[3] => Mux4.IN16
+bi_digit[3] => Mux5.IN16
+bi_digit[3] => Mux6.IN8
+bi_digit[3] => Mux7.IN8
+seg[0] <= seg[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= <GND>
+seg[2] <= seg[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= seg[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= seg[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= seg[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= seg[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3|wire_to_bus:inst17
+T1 => out[1].DATAIN
+T0 => out[0].DATAIN
+out[0] <= T0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= T1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= <GND>
+out[3] <= <GND>
+
+
+|lab3|adder:inst16
+cs => w0.IN0
+cs => w2.IN0
+ls => w0.IN1
+ls => w2.IN1
+rs => w1.IN1
+rs => s.IN1
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+

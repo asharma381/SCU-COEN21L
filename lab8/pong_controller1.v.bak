@@ -1,0 +1,5 @@
+module pong_controller1(clk, qleft, ireset, irsrv, s, lsi);
+	input clk, qleft, ireset, irsrv;
+	output [1:0] s;
+	output lsi;
+	

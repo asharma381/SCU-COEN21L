@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at pong_controller2.v(12): always construct contains both blocking and non-blocking assignments File: //samba1/sbuddhar/dcengr/Desktop/elen/lab9/pong_controller2.v Line: 12

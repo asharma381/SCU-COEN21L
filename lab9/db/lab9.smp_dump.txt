@@ -1,0 +1,8 @@
+
+State Machine - |lab9|pong_game12:inst|pong_controller2:u2|currentstate
+Name currentstate.0000 currentstate.1000 currentstate.0100 currentstate.0010 currentstate.sidle 
+currentstate.0000 0 0 0 0 0 
+currentstate.sidle 1 0 0 0 1 
+currentstate.0010 1 0 0 1 0 
+currentstate.0100 1 0 1 0 0 
+currentstate.1000 1 1 0 0 0 

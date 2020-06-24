@@ -1,0 +1,135 @@
+|lab4
+output[0] <= bin_7seg:inst9.seg[0]
+output[1] <= bin_7seg:inst9.seg[1]
+output[2] <= bin_7seg:inst9.seg[2]
+output[3] <= bin_7seg:inst9.seg[3]
+output[4] <= bin_7seg:inst9.seg[4]
+output[5] <= bin_7seg:inst9.seg[5]
+output[6] <= bin_7seg:inst9.seg[6]
+a0 => s2f0:inst6.a0
+a0 => s2f1:inst8.a0
+a0 => s1f1:inst12.a0
+a0 => sum0:inst3.a0
+b1 => s2f0:inst6.b1
+b1 => s2f1:inst8.b1
+b1 => s1f0:inst4.b1
+b1 => s1f1:inst12.b1
+b1 => muxselect:inst.s
+b0 => s2f0:inst6.b0
+b0 => s2f1:inst8.b0
+b0 => muxselect:inst1.s
+b0 => sum0:inst3.b0
+a1 => muxselect:inst2.s
+a1 => s1f0:inst4.a1
+a1 => s1f1:inst12.a1
+
+
+|lab4|bin_7seg:inst9
+bi_digit[0] => Mux0.IN19
+bi_digit[0] => Mux1.IN19
+bi_digit[0] => Mux2.IN19
+bi_digit[0] => Mux3.IN19
+bi_digit[0] => Mux4.IN19
+bi_digit[0] => Mux5.IN19
+bi_digit[0] => Mux6.IN19
+bi_digit[0] => Mux7.IN19
+bi_digit[1] => Mux0.IN18
+bi_digit[1] => Mux1.IN18
+bi_digit[1] => Mux2.IN18
+bi_digit[1] => Mux3.IN18
+bi_digit[1] => Mux4.IN18
+bi_digit[1] => Mux5.IN18
+bi_digit[1] => Mux6.IN18
+bi_digit[1] => Mux7.IN18
+bi_digit[2] => Mux0.IN17
+bi_digit[2] => Mux1.IN17
+bi_digit[2] => Mux2.IN17
+bi_digit[2] => Mux3.IN17
+bi_digit[2] => Mux4.IN17
+bi_digit[2] => Mux5.IN17
+bi_digit[2] => Mux6.IN17
+bi_digit[2] => Mux7.IN17
+bi_digit[3] => Mux0.IN16
+bi_digit[3] => Mux1.IN16
+bi_digit[3] => Mux2.IN16
+bi_digit[3] => Mux3.IN16
+bi_digit[3] => Mux4.IN16
+bi_digit[3] => Mux5.IN16
+bi_digit[3] => Mux6.IN16
+bi_digit[3] => Mux7.IN16
+seg[0] <= seg[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= seg[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= seg[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= seg[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= seg[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= seg[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= seg[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab4|wire_to_bus:inst10
+T2 => out[2].DATAIN
+T1 => out[1].DATAIN
+T0 => out[0].DATAIN
+out[0] <= T0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= T1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= T2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= <GND>
+
+
+|lab4|muxselect:inst2
+A => F.IN0
+B => F.IN0
+s => F.IN1
+s => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab4|s2f0:inst6
+a0 => F.IN0
+b1 => F.IN1
+b0 => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab4|s2f1:inst8
+a0 => F.IN0
+b0 => F.IN1
+b1 => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab4|muxselect:inst1
+A => F.IN0
+B => F.IN0
+s => F.IN1
+s => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab4|s1f0:inst4
+a1 => F.IN0
+b1 => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab4|s1f1:inst12
+a1 => F.IN0
+a0 => F.IN1
+b1 => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab4|muxselect:inst
+A => F.IN0
+B => F.IN0
+s => F.IN1
+s => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab4|sum0:inst3
+a0 => F.IN0
+b0 => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+

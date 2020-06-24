@@ -1,0 +1,6 @@
+module isolate(q, q3);
+	input [3:0] q;
+	output q3;
+	
+	assign q3 = q[3];
+endmodule 

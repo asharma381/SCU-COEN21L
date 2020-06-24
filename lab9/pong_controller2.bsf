@@ -1,0 +1,174 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 176 192)
+	(text "pong_controller2" (rect 5 0 69 12)(font "Arial" ))
+	(text "inst" (rect 8 160 20 172)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "qleft" (rect 0 0 16 12)(font "Arial" ))
+		(text "qleft" (rect 21 27 37 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "qright" (rect 0 0 21 12)(font "Arial" ))
+		(text "qright" (rect 21 43 42 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "ireset" (rect 0 0 21 12)(font "Arial" ))
+		(text "ireset" (rect 21 59 42 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "irsrv" (rect 0 0 18 12)(font "Arial" ))
+		(text "irsrv" (rect 21 75 39 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "ilsrv" (rect 0 0 16 12)(font "Arial" ))
+		(text "ilsrv" (rect 21 91 37 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "irpad" (rect 0 0 18 12)(font "Arial" ))
+		(text "irpad" (rect 21 107 39 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "ilpad" (rect 0 0 16 12)(font "Arial" ))
+		(text "ilpad" (rect 21 123 37 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "clk" (rect 0 0 10 12)(font "Arial" ))
+		(text "clk" (rect 21 139 31 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
+	)
+	(port
+		(pt 160 32)
+		(output)
+		(text "s[1..0]" (rect 0 0 23 12)(font "Arial" ))
+		(text "s[1..0]" (rect 116 27 139 39)(font "Arial" ))
+		(line (pt 160 32)(pt 144 32)(line_width 3))
+	)
+	(port
+		(pt 160 48)
+		(output)
+		(text "lct" (rect 0 0 8 12)(font "Arial" ))
+		(text "lct" (rect 131 43 139 55)(font "Arial" ))
+		(line (pt 160 48)(pt 144 48)(line_width 1))
+	)
+	(port
+		(pt 160 64)
+		(output)
+		(text "rct" (rect 0 0 10 12)(font "Arial" ))
+		(text "rct" (rect 129 59 139 71)(font "Arial" ))
+		(line (pt 160 64)(pt 144 64)(line_width 1))
+	)
+	(port
+		(pt 160 80)
+		(output)
+		(text "lsi" (rect 0 0 7 12)(font "Arial" ))
+		(text "lsi" (rect 132 75 139 87)(font "Arial" ))
+		(line (pt 160 80)(pt 144 80)(line_width 1))
+	)
+	(port
+		(pt 160 96)
+		(output)
+		(text "rsi" (rect 0 0 9 12)(font "Arial" ))
+		(text "rsi" (rect 130 91 139 103)(font "Arial" ))
+		(line (pt 160 96)(pt 144 96)(line_width 1))
+	)
+	(port
+		(pt 160 112)
+		(output)
+		(text "curS[3..0]" (rect 0 0 38 12)(font "Arial" ))
+		(text "curS[3..0]" (rect 101 107 139 119)(font "Arial" ))
+		(line (pt 160 112)(pt 144 112)(line_width 3))
+	)
+	(parameter
+		"sidle"
+		"0000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"srsrv"
+		"0001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"slsrv"
+		"0010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"srmovl"
+		"0011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"slmovl"
+		"0100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"slmisl"
+		"0101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"srmisl"
+		"0110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"sendl"
+		"0111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"sendr"
+		"1000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 144 160)(line_width 1))
+	)
+	(annotation_block (parameter)(rect 176 -64 276 16))
+)

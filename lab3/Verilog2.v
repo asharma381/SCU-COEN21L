@@ -1,0 +1,13 @@
+module adder (cs,ls,rs,c,s);
+	input cs, ls, rs;
+	output c, s;
+	wire w0,w1,w2;
+	
+	assign w0 = cs ^ ls;
+	assign w1 = w0 & rs;
+	assign w2 = cs & ls;
+	
+	assign s = w0 ^ rs;
+	assign c = w1 | w2;
+	
+endmodule

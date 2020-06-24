@@ -1,0 +1,197 @@
+|lab7
+HEX0[0] <= Lab5_display:inst6.seg[0]
+HEX0[1] <= Lab5_display:inst6.seg[1]
+HEX0[2] <= Lab5_display:inst6.seg[2]
+HEX0[3] <= Lab5_display:inst6.seg[3]
+HEX0[4] <= Lab5_display:inst6.seg[4]
+HEX0[5] <= Lab5_display:inst6.seg[5]
+HEX0[6] <= Lab5_display:inst6.seg[6]
+CLOCK_50 => clock_module:inst.CLOCK_50
+SW[0] => counter:inst4.Dir
+SW[1] => counter:inst3.Dir
+SW[2] => clock_module:inst.switches[0]
+SW[3] => clock_module:inst.switches[1]
+KEY[0] => WinLose:inst5.S
+HEX1[0] <= Lab5_display:inst7.seg[0]
+HEX1[1] <= Lab5_display:inst7.seg[1]
+HEX1[2] <= Lab5_display:inst7.seg[2]
+HEX1[3] <= Lab5_display:inst7.seg[3]
+HEX1[4] <= Lab5_display:inst7.seg[4]
+HEX1[5] <= Lab5_display:inst7.seg[5]
+HEX1[6] <= Lab5_display:inst7.seg[6]
+LEDR[0] <= WinLose:inst5.W
+LEDR[1] <= WinLose:inst5.L
+
+
+|lab7|Lab5_display:inst6
+bi_digit[0] => Decoder0.IN3
+bi_digit[1] => Decoder0.IN2
+bi_digit[2] => Decoder0.IN1
+bi_digit[3] => Decoder0.IN0
+overflow => seg.OUTPUTSELECT
+overflow => seg.OUTPUTSELECT
+overflow => seg.OUTPUTSELECT
+overflow => seg.OUTPUTSELECT
+overflow => seg.OUTPUTSELECT
+overflow => seg.OUTPUTSELECT
+overflow => seg.OUTPUTSELECT
+seg[0] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab7|conv:inst9
+A[0] => Z[0].DATAIN
+A[1] => Z[1].DATAIN
+A[2] => Z[2].DATAIN
+Z[0] <= A[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= A[1].DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= A[2].DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= <GND>
+
+
+|lab7|counter:inst3
+C => temp[0].CLK
+C => temp[1].CLK
+C => temp[2].CLK
+Dir => temp.OUTPUTSELECT
+Dir => temp.OUTPUTSELECT
+Dir => temp.OUTPUTSELECT
+En => temp.OUTPUTSELECT
+En => temp.OUTPUTSELECT
+En => temp.OUTPUTSELECT
+En => temp[2].ENA
+En => temp[1].ENA
+En => temp[0].ENA
+F[0] <= temp[0].DB_MAX_OUTPUT_PORT_TYPE
+F[1] <= temp[1].DB_MAX_OUTPUT_PORT_TYPE
+F[2] <= temp[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab7|clock_module:inst
+switches[0] => Equal0.IN1
+switches[0] => Equal1.IN0
+switches[0] => Equal2.IN1
+switches[0] => Equal3.IN1
+switches[1] => Equal0.IN0
+switches[1] => Equal1.IN1
+switches[1] => Equal2.IN0
+switches[1] => Equal3.IN0
+CLOCK_50 => CLOCK_50.IN1
+clk1 <= clk1$latch.DB_MAX_OUTPUT_PORT_TYPE
+clk2 <= clk2$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab7|clock_module:inst|clock_counter:cc
+CLOCK_50 => CLOCK_2~reg0.CLK
+CLOCK_50 => clk2_counter[0].CLK
+CLOCK_50 => clk2_counter[1].CLK
+CLOCK_50 => clk2_counter[2].CLK
+CLOCK_50 => clk2_counter[3].CLK
+CLOCK_50 => clk2_counter[4].CLK
+CLOCK_50 => clk2_counter[5].CLK
+CLOCK_50 => clk2_counter[6].CLK
+CLOCK_50 => clk2_counter[7].CLK
+CLOCK_50 => CLOCK_1~reg0.CLK
+CLOCK_50 => clk1_counter[0].CLK
+CLOCK_50 => clk1_counter[1].CLK
+CLOCK_50 => clk1_counter[2].CLK
+CLOCK_50 => clk1_counter[3].CLK
+CLOCK_50 => clk1_counter[4].CLK
+CLOCK_50 => clk1_counter[5].CLK
+CLOCK_50 => clk1_counter[6].CLK
+CLOCK_50 => clk1_counter[7].CLK
+CLOCK_50 => main_out.CLK
+CLOCK_50 => main_counter[0].CLK
+CLOCK_50 => main_counter[1].CLK
+CLOCK_50 => main_counter[2].CLK
+CLOCK_50 => main_counter[3].CLK
+CLOCK_50 => main_counter[4].CLK
+CLOCK_50 => main_counter[5].CLK
+CLOCK_50 => main_counter[6].CLK
+CLOCK_50 => main_counter[7].CLK
+CLOCK_50 => main_counter[8].CLK
+CLOCK_50 => main_counter[9].CLK
+CLOCK_50 => main_counter[10].CLK
+CLOCK_50 => main_counter[11].CLK
+CLOCK_50 => main_counter[12].CLK
+CLOCK_50 => main_counter[13].CLK
+CLOCK_50 => main_counter[14].CLK
+CLOCK_50 => main_counter[15].CLK
+CLOCK_50 => main_counter[16].CLK
+CLOCK_1 <= CLOCK_1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK_2 <= CLOCK_2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab7|WinLose:inst5
+A[0] => Equal0.IN2
+A[1] => Equal0.IN1
+A[2] => Equal0.IN0
+B[0] => Equal0.IN5
+B[1] => Equal0.IN4
+B[2] => Equal0.IN3
+S => always0.IN1
+S => always0.IN1
+S => comb.IN1
+S => L.OUTPUTSELECT
+S => W.OUTPUTSELECT
+S => E.IN1
+S => comb.IN1
+E <= E$latch.DB_MAX_OUTPUT_PORT_TYPE
+W <= W$latch.DB_MAX_OUTPUT_PORT_TYPE
+L <= L$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab7|counter:inst4
+C => temp[0].CLK
+C => temp[1].CLK
+C => temp[2].CLK
+Dir => temp.OUTPUTSELECT
+Dir => temp.OUTPUTSELECT
+Dir => temp.OUTPUTSELECT
+En => temp.OUTPUTSELECT
+En => temp.OUTPUTSELECT
+En => temp.OUTPUTSELECT
+En => temp[2].ENA
+En => temp[1].ENA
+En => temp[0].ENA
+F[0] <= temp[0].DB_MAX_OUTPUT_PORT_TYPE
+F[1] <= temp[1].DB_MAX_OUTPUT_PORT_TYPE
+F[2] <= temp[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab7|Lab5_display:inst7
+bi_digit[0] => Decoder0.IN3
+bi_digit[1] => Decoder0.IN2
+bi_digit[2] => Decoder0.IN1
+bi_digit[3] => Decoder0.IN0
+overflow => seg.OUTPUTSELECT
+overflow => seg.OUTPUTSELECT
+overflow => seg.OUTPUTSELECT
+overflow => seg.OUTPUTSELECT
+overflow => seg.OUTPUTSELECT
+overflow => seg.OUTPUTSELECT
+overflow => seg.OUTPUTSELECT
+seg[0] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= seg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab7|conv:inst8
+A[0] => Z[0].DATAIN
+A[1] => Z[1].DATAIN
+A[2] => Z[2].DATAIN
+Z[0] <= A[0].DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= A[1].DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= A[2].DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= <GND>
+
+
